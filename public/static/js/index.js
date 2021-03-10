@@ -4,11 +4,21 @@ const outputForm = document.querySelector('.output-form');
 const output = document.querySelector('.output');
 const shortenBtn = document.querySelector('.btn');
 
-const isValidUrl = (url) => url.protocol === 'http:' || url.protocol === 'https:';
+// refL https://stackoverflow.com/questions/5717093/check-if-a-javascript-string-is-a-url
+
+const isValidUrl = (inputUrl) => {
+    let url;
+    try {
+        url = new URL(inputUrl);
+    } catch (_) {
+        return false;
+    }
+    return url.protocol === 'http:' || url.protocol === 'https:';
+};
 
 shortenBtn.addEventListener('click', () => {
     const url = input.value;
-    if (!isValidUrl(new URL(url))) {
+    if (!isValidUrl(url)) {
         outputForm.classList.add('active');
         output.value = 'Please, provide a valid url';
         setTimeout(() => {
