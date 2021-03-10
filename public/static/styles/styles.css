@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
   font-family: 'Poppins', sans-serif;
+}
+
+.form-wrapper {
+  height: 200px;
+  width: auto; 
+  padding: 6px 12px;
+
 }
