@@ -8,15 +8,21 @@
     <link rel="stylesheet" href="./static/styles/styles.css">
 </head>
 <body>
-    <h1>URL-Shortner</h1>
+    <h1 class="header">URL-Shortner <img class="logo" src="https://miro.medium.com/max/300/1*jcRqWsK1oYk3f77sbiDYEg.png"></img></h1>
     <div class="form-wrapper">
+        <div class="input-form">
         <input 
         type="text" 
-        class="input" 
+        class="input longURL" 
         placeholder="Enter url to shorten...">
-        <button class="btn">shorten</button>
+        <button class="btn">Shorten</button>
+        </div>
+
+        <div class="output-form">
+        <input type="text" class="output" spellcheck="false" disabled>
+        <button class="btn copy">Copy</button>
+        </div>
     </div>
-    <input type="text" class="input" disabled>
     <script src="./static/js/index.js"></script>
 </body>
 </html>

@@ -4,14 +4,141 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 40vh;
   flex-direction: column;
+  background: linear-gradient(134deg, #6A98F0 0%, #4961DC 99%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: 'Poppins', sans-serif;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 86px;
+  width: 86px;
+  position: relative;
+  bottom: 20px;
+  margin: 10px;
+}
+
 .form-wrapper {
-  height: 200px;
+  height: 140px;
   width: auto; 
   padding: 6px 12px;
+  background: #fafafa;
+  border-radius: 4px;
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.4);
+}
 
+.input-form {
+   margin-left: 10px;
+}
+
+.input {
+  width: 300px;
+  height: 29px;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: 0.2s ease;
+  border: 2px solid #fafafa;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.input::placeholder {
+    font-size: 1rem;
+}
+
+.longURL:focus {
+    border: 2px solid rgb(37, 156, 177);
+}
+
+h1 {
+  color: #fafafa;
+  text-shadow: 0 3px 9px rgba(0, 0, 0, 0.4);
+}
+
+.btn { 
+  border: none;
+  outline: none;
+  padding: 12px 18px;
+  border-radius: 3px;
+  background: rgb(22, 114, 22);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.btn:hover {
+  background: rgb(49, 173, 49);
+}
+
+.btn:active {
+  transform: scale(0.9);
+  background: rgb(11, 233, 11);
+}
+
+.output-form {
+  width: auto;
+  background: #fff;
+  display: flex;
+  height: 55px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 2px 11px;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.active {
+  background: rgb(184, 86, 86);
+}
+
+.active .copy {
+    background: rgb(180, 105, 105);
+}
+
+.active .output {
+  color: #fff;
+  font-size: 1rem;
+  background: rgb(180, 105, 105);
+}
+
+.output {
+  width: 300px;
+  height: 29px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  padding: 6px 12px;
+  border-radius: 5px;
+  margin-top: 10px;
+  background: #fff;
+  position: relative;
+  bottom: 5px;
+}
+
+.copy {
+  margin-left: 5px;
+  padding: 10px 20px;
+  background: rgb(30, 120, 180);
+}
+
+.copy:hover {
+  background: rgb(63, 151, 209);
+}
+
+.copy:active { 
+  background: rgb(47, 144, 209);
 }
