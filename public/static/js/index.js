@@ -9,6 +9,21 @@ let countUrls = 0;
 
 // refL https://stackoverflow.com/questions/5717093/check-if-a-javascript-string-is-a-url
 
+// instantiate a clipboard JS object
+new ClipboardJS('.btn.copy');
+
+// for tooltip
+tippy('.btn.copy', {
+    content: 'copied',
+    trigger: 'click',
+    hideOnClick: false,
+    onShow(instance) {
+        setTimeout(() => {
+            instance.hide();
+        }, 1000);
+    },
+});
+
 const isValidUrl = (inputUrl) => {
     let url;
     try {

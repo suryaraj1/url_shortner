@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale-subtle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/themes/light.css" />
     <link rel="stylesheet" href="./static/styles/styles.css">
 </head>
 <body>
@@ -19,8 +21,8 @@
         </div>
 
         <div class="output-form">
-        <input type="text" class="output" spellcheck="false" disabled>
-        <button class="btn copy">Copy</button>
+        <input type="text" class="output" spellcheck="false" readonly>
+        <button class="btn copy" data-clipboard-target=".output">Copy</button>
         </div>
     </div>
     <table class="content-table">
@@ -35,6 +37,9 @@
             
         </tbody>
     </table>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
     <script src="./static/js/index.js"></script>
 </body>
 </html>
