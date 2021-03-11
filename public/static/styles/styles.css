@@ -201,3 +201,44 @@ h1 {
 .content-table tbody tr:last-of-type {
   border-bottom: 4px solid rgb(30, 120, 180);
 }
+
+@media screen and (max-width: 600px) {
+  .form-wrapper {
+    width: 320px;
+    height: auto;
+  }
+
+  .input {
+    position: relative;
+    right: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 10px;
+    position: relative;
+    right: 13px;
+  }
+
+  .output-form {
+    position: relative;
+    width: 280px;
+  }
+
+  .output {
+    width: 180px;
+    position: relative;
+    left: 11px;
+  }
+
+  .copy {
+    position: relative;
+    left: 7px;
+  }
+
+  .content-table {
+    min-width: 300px;
+    font-size: 0.4em;
+  }
+
+}
