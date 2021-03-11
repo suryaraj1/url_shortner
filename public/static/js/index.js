@@ -2,7 +2,10 @@
 const input = document.querySelector('.input');
 const outputForm = document.querySelector('.output-form');
 const output = document.querySelector('.output');
+const tableBody = document.querySelector('.table-body');
 const shortenBtn = document.querySelector('.btn');
+
+let countUrls = 0;
 
 // refL https://stackoverflow.com/questions/5717093/check-if-a-javascript-string-is-a-url
 
@@ -39,6 +42,18 @@ shortenBtn.addEventListener('click', () => {
             .then((json) => {
                 const shortUrl = `${document.location.origin}/${json.id}`;
                 output.value = shortUrl;
+                countUrls += 1;
+                const row = document.createElement('tr');
+                const idNumber = document.createElement('td');
+                const longUrlCell = document.createElement('td');
+                const shortUrlCell = document.createElement('td');
+                longUrlCell.innerHTML = url;
+                shortUrlCell.innerHTML = shortUrl;
+                idNumber.innerHTML = countUrls;
+                row.appendChild(idNumber);
+                row.appendChild(longUrlCell);
+                row.appendChild(shortUrlCell);
+                tableBody.appendChild(row);
             });
     }
 });
