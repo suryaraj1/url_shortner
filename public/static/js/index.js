@@ -34,6 +34,21 @@ const isValidUrl = (inputUrl) => {
     return url.protocol === 'http:' || url.protocol === 'https:';
 };
 
+const displayUrl = (url, shortUrl) => {
+    countUrls += 1;
+    const row = document.createElement('tr');
+    const idNumber = document.createElement('td');
+    const longUrlCell = document.createElement('td');
+    const shortUrlCell = document.createElement('td');
+    longUrlCell.innerHTML = url;
+    shortUrlCell.innerHTML = shortUrl;
+    idNumber.innerHTML = countUrls;
+    row.appendChild(idNumber);
+    row.appendChild(longUrlCell);
+    row.appendChild(shortUrlCell);
+    tableBody.appendChild(row);
+};
+
 shortenBtn.addEventListener('click', () => {
     const url = input.value;
     if (!isValidUrl(url)) {
@@ -57,18 +72,7 @@ shortenBtn.addEventListener('click', () => {
             .then((json) => {
                 const shortUrl = `${document.location.origin}/${json.id}`;
                 output.value = shortUrl;
-                countUrls += 1;
-                const row = document.createElement('tr');
-                const idNumber = document.createElement('td');
-                const longUrlCell = document.createElement('td');
-                const shortUrlCell = document.createElement('td');
-                longUrlCell.innerHTML = url;
-                shortUrlCell.innerHTML = shortUrl;
-                idNumber.innerHTML = countUrls;
-                row.appendChild(idNumber);
-                row.appendChild(longUrlCell);
-                row.appendChild(shortUrlCell);
-                tableBody.appendChild(row);
+                displayUrl(url, shortUrl);
             });
     }
 });

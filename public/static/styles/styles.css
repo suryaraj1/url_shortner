@@ -145,6 +145,11 @@ h1 {
   bottom: 5px;
 }
 
+.output::selection {
+  background: none;
+  color: none;
+}
+
 .copy {
   margin-left: 5px;
   padding: 11px 21px;
