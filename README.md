@@ -1,6 +1,8 @@
 # URL Shortner
 A web app with a minimal User Interface that converts a regular URL into its condensed version :link:
 
+<img align="center" src="https://media.giphy.com/media/A6GX5elFDQ7FXqRNCR/giphy.gif"/>
+
 ## Tech Stack :computer:
 <p align="left">
   <img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" width="40px" alt="html"/>
